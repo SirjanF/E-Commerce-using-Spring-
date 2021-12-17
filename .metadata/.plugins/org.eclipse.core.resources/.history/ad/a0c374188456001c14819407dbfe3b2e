@@ -1,0 +1,18 @@
+package com.shopme.admin.user;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+public class PassEncoderTest {
+	
+	@Test
+	public void testEncodePassword() {
+		BCryptPasswordEncoder passwordEncoder =new BcryptPasswordEncoder();
+		String rawPassword = "111111111";
+		String encodedPassword = passwordEncoder.encode(rawPassword);
+		System.out.println(encodedPassword);
+		
+		
+	}
+
+}
